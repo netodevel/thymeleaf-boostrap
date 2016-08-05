@@ -10,7 +10,7 @@ import org.thymeleaf.dom.Text;
  * @author Jose
  *
  */
-public class Label {
+public class Label implements Component {
 
 	private String id;
 	private String text;
@@ -47,6 +47,7 @@ public class Label {
 		this.cssClasses = cssClasses;
 	}
 	
+	@Override
 	public Element toNode() {
 		Element label = new Element("span");
 		label.setProcessable(true);

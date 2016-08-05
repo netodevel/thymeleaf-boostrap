@@ -13,10 +13,10 @@ public class Application {
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
 	}
-	
+
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-    public String home() {
-        return "index";
-    }
+	public String home() {
+		return "index";
+	}
 
 }
