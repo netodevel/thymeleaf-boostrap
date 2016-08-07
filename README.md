@@ -28,8 +28,15 @@
     		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
       </head>	
       <body>
-    	<p> Testing Boostrap Label  </p>
-    	<bootstrap:label text="testando!"></bootstrap:label> 
+      	<div class="container">
+    		<h1>Bootstrap Label</h1>
+    		<bootstrap:label value="default" class="label label-default"></bootstrap:label> 
+    		<bootstrap:label value="primary" class="label label-primary"></bootstrap:label> 
+    		<bootstrap:label value="success" class="label label-success"></bootstrap:label> 
+    		<bootstrap:label value="info" class="label label-info"></bootstrap:label> 
+    		<bootstrap:label value="warning" class="label label-warning"></bootstrap:label> 
+    		<bootstrap:label value="danger" class="label label-danger"></bootstrap:label> 
+      	</div>
       </body>
     </html>
 
