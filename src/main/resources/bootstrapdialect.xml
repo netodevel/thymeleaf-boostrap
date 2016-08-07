@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dialect xmlns="http://www.thymeleaf.org/extras/dialect"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.thymeleaf.org/extras/dialect
+                        http://www.thymeleaf.org/xsd/thymeleaf-extras-dialect-2.1.xsd"
+    prefix="bootstrap"
+    namespace-uri="http://www.ppi.de/thymeleaf/bootstrap2"
+    class="thymeleaf.bootstrap.dialect.BootstrapDialect">
+
+    <attribute-processor name="form" class="thymeleaf.bootstrap.processor.BootstrapFormProcessor"></attribute-processor>
+    <attribute-processor name="label" class="thymeleaf.bootstrap.processor.BootstrapLabelProcessor"></attribute-processor>
+    <attribute-processor name="formgroup" class="thymeleaf.bootstrap.processor.BootstrapFormGroupProcessor"></attribute-processor>
+
+</dialect>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-  xmlns:th="http://www.thymeleaf.org">
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns:bootstrap="http://www.ppi.de/thymeleaf/bootstrap2">
   <head>
   		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"  />
@@ -18,8 +19,9 @@
 		<bootstrap:label value="info" class="label label-info"></bootstrap:label> 
 		<bootstrap:label value="warning" class="label label-warning"></bootstrap:label> 
 		<bootstrap:label value="danger" class="label label-danger"></bootstrap:label>
-		
-		<bootstrap:form></bootstrap:form>
+
+		<bootstrap:form th:method="post">
+		</bootstrap:form>
 		 
   	</div>
   </body>
