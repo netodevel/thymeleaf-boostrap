@@ -6,6 +6,7 @@ import java.util.Set;
 import org.thymeleaf.dialect.AbstractDialect;
 import org.thymeleaf.processor.IProcessor;
 
+import thymeleaf.bootstrap.processor.BootstrapFormProcessor;
 import thymeleaf.bootstrap.processor.BootstrapLabelProcessor;
 
 /**
@@ -29,6 +30,7 @@ public class BootstrapDialect extends AbstractDialect {
 	public Set<IProcessor> getProcessors() {
 		final Set<IProcessor> processors = new HashSet<IProcessor>();
 		processors.add(new BootstrapLabelProcessor());
+		processors.add(new BootstrapFormProcessor());
 		return processors;
 	}
 
