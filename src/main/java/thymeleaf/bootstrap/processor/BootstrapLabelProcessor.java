@@ -4,7 +4,9 @@ import org.thymeleaf.Arguments;
 import org.thymeleaf.dom.Element;
 import org.thymeleaf.processor.ProcessorResult;
 import org.thymeleaf.processor.element.AbstractElementProcessor;
+import org.thymeleaf.util.Validate;
 
+import thymeleaf.bootstrap.component.Component;
 import thymeleaf.bootstrap.component.Label;
 import thymeleaf.bootstrap.dom.LabelTagGenerateDom;
 
@@ -16,7 +18,12 @@ public class BootstrapLabelProcessor extends AbstractElementProcessor {
 
 	@Override
 	protected ProcessorResult processElement(Arguments arguments, Element element) {
-		LabelTagGenerateDom.generateLabel(element, new Label(element.getAttributeValue("text")));
+		String id = element.getAttributeValue("id");
+		String value = element.getAttributeValue("value");
+		String classElement = element.getAttributeValue("class");
+		Validate.notNull(value, "You must define a value");
+
+		LabelTagGenerateDom.generateLabel(element, new Label(id != null ? id : Component.generateId(), value, classElement != null ? classElement : "label label-default"));
 		element.getParent().removeChild(element); 
 		return ProcessorResult.OK;
 	}
